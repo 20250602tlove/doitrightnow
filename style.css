@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Pretendard", sans-serif;
+    background: #ffffff;
+    color: #111;
+}
+
+/* 네비게이션 */
+.nav {
+    width: 100%;
+    padding: 24px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* 버튼 */
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.text-btn {
+    background: none;
+    font-size: 14px;
+}
+
+.primary-btn {
+    background: #111;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.primary-btn:hover {
+    opacity: 0.8;
+}
+
+.outline-btn {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.large {
+    padding: 14px 28px;
+    font-size: 16px;
+}
+
+/* 히어로 */
+.hero {
+    text-align: center;
+    margin-top: 140px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #000;
+}
+
+.sub {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #666;
+}
+
+.hero-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* 정보 섹션 */
+.info {
+    margin-top: 160px;
+    padding: 0 60px 100px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    text-align: center;
+}
+
+.info-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    font-size: 14px;
+    color: #777;
+}
