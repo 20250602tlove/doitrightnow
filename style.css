@@ -15,16 +15,12 @@ body {
 }
 
 /* =========================
-   애니메이션 키프레임
+   애니메이션
 ========================= */
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes slideUp {
@@ -74,7 +70,7 @@ body {
 }
 
 /* =========================
-   버튼 스타일
+   버튼
 ========================= */
 
 button {
@@ -144,35 +140,14 @@ button {
 
 .hero h1 span {
     display: inline-block;
-    position: relative;
-}
-
-/* 얼른해 강조 애니메이션 */
-.hero h1 span::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: 6px;
-    background: #111;
-    transform: scaleX(0);
-    transform-origin: left;
-    animation: underlineGrow 1s ease forwards 0.8s;
-}
-
-@keyframes underlineGrow {
-    to {
-        transform: scaleX(1);
-    }
 }
 
 .sub {
     margin-top: 24px;
     font-size: 18px;
     color: #666;
-    animation: slideUp 1s ease forwards 0.3s;
     opacity: 0;
+    animation: slideUp 1s ease forwards 0.3s;
     animation-fill-mode: forwards;
 }
 
@@ -181,8 +156,8 @@ button {
     display: flex;
     justify-content: center;
     gap: 16px;
-    animation: slideUp 1s ease forwards 0.6s;
     opacity: 0;
+    animation: slideUp 1s ease forwards 0.6s;
     animation-fill-mode: forwards;
 }
 
@@ -205,15 +180,9 @@ button {
     animation: floatUp 1s ease forwards;
 }
 
-.info-box:nth-child(1) {
-    animation-delay: 0.2s;
-}
-.info-box:nth-child(2) {
-    animation-delay: 0.4s;
-}
-.info-box:nth-child(3) {
-    animation-delay: 0.6s;
-}
+.info-box:nth-child(1) { animation-delay: 0.2s; }
+.info-box:nth-child(2) { animation-delay: 0.4s; }
+.info-box:nth-child(3) { animation-delay: 0.6s; }
 
 .info-box h3 {
     font-size: 18px;
