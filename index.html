@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>얼른해</title>
 
-    <!-- Pretendard CDN -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
-    <link rel="stylesheet" href="style.css" />
+    <!-- Pretendard -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- 네비게이션 -->
     <nav class="nav">
         <div class="logo">얼른해</div>
         <div class="nav-actions">
@@ -19,6 +20,7 @@
         </div>
     </nav>
 
+    <!-- 히어로 -->
     <main class="hero">
         <h1>
             체크리스트?<br>
@@ -31,10 +33,11 @@
 
         <div class="hero-buttons">
             <button class="primary-btn large">얼른 시작</button>
-            <button class="outline-btn large">서비스 소개</button>
+            <button class="outline-btn large" id="introBtn">서비스 소개</button>
         </div>
     </main>
 
+    <!-- 간단 정보 -->
     <section class="info">
         <div class="info-box">
             <h3>공동 진행</h3>
@@ -51,6 +54,36 @@
             <p>완료한 날은 색으로 확인.</p>
         </div>
     </section>
+
+    <!-- 서비스 소개 모달 -->
+    <div class="modal" id="introModal">
+        <div class="modal-content">
+            <p>13년생이 만든 앱임</p>
+            <button id="closeModal">닫기</button>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script>
+        const introBtn = document.getElementById("introBtn");
+        const modal = document.getElementById("introModal");
+        const closeModal = document.getElementById("closeModal");
+
+        introBtn.addEventListener("click", () => {
+            modal.style.display = "flex";
+        });
+
+        closeModal.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+        // 모달 바깥 클릭하면 닫기
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
 
 </body>
 </html>
